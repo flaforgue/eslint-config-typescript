@@ -15,7 +15,7 @@ export default [
     },
   },
   eslintjs.configs.recommended,
-  ...tsEslint.configs.eslintRecommended,
+  tsEslint.configs.eslintRecommended,
   ...tsEslint.configs.strictTypeChecked,
   ...tsEslint.configs.stylisticTypeChecked,
   {
