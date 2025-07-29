@@ -31,7 +31,7 @@ export default [
       "block-scoped-var": "error",
       "default-case": ["error"],
       "default-param-last": ["error"],
-      "max-classes-per-file": ["error", 1],
+      "max-classes-per-file": ["off"],
       "no-caller": ["error"],
       "no-constructor-return": ["error"],
       "no-eq-null": ["error"],
@@ -68,13 +68,6 @@ export default [
 
       // Typescript
       "@typescript-eslint/explicit-member-accessibility": ["error"],
-      "@typescript-eslint/restrict-template-expressions": [
-        "error",
-        {
-          allowNumber: true,
-        }
-      ],
-      "@typescript-eslint/strict-boolean-expressions": "error",
       "@typescript-eslint/naming-convention": [
         "error",
         {
@@ -101,6 +94,16 @@ export default [
           ],
         },
       ],
+      "@typescript-eslint/no-extraneous-class": ["error", {
+        "allowWithDecorator": true
+      }],
+      "@typescript-eslint/restrict-template-expressions": [
+        "error",
+        {
+          allowNumber: true,
+        }
+      ],
+      "@typescript-eslint/strict-boolean-expressions": "error",
 
       // Stylistic JS
       "@stylistic/js/arrow-parens": ["error", "always"],
