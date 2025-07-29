@@ -1,7 +1,6 @@
 import eslintjs from "@eslint/js";
 import tsEslint from "typescript-eslint";
-import stylisticJsPlugin from "@stylistic/eslint-plugin-js";
-import stylisticTsPlugin from "@stylistic/eslint-plugin-ts";
+import stylisticPlugin from '@stylistic/eslint-plugin'
 import unusedImportsPlugin from "eslint-plugin-unused-imports";
 
 export default [
@@ -22,8 +21,7 @@ export default [
     plugins: {
       "unused-imports": unusedImportsPlugin,
       "@typescript-eslint": tsEslint.plugin,
-      "@stylistic/ts": stylisticTsPlugin,
-      "@stylistic/js": stylisticJsPlugin,
+      "@stylistic": stylisticPlugin,
     },
     rules: {
       // Eslint
@@ -106,34 +104,32 @@ export default [
       "@typescript-eslint/strict-boolean-expressions": "error",
 
       // Stylistic JS
-      "@stylistic/js/arrow-parens": ["error", "always"],
-      "@stylistic/js/function-call-argument-newline": ["error", "consistent"],
-      "@stylistic/js/indent": ["error", 2],
-      "@stylistic/js/no-multi-spaces": "error",
-      "@stylistic/js/no-multiple-empty-lines": "error",
-      "@stylistic/js/no-trailing-spaces": "error",
-      "@stylistic/js/no-whitespace-before-property": "error",
-
-      // Stylistic TS
-      "@stylistic/ts/comma-spacing": ["error"],
-      "@stylistic/ts/comma-dangle": ["error", "always-multiline"],
-      "@stylistic/ts/function-call-spacing": ["error", "never"],
-      "@stylistic/ts/member-delimiter-style": "error",
-      "@stylistic/ts/object-property-newline": [
+      "@stylistic/arrow-parens": ["error", "always"],
+      "@stylistic/function-call-argument-newline": ["error", "consistent"],
+      "@stylistic/indent": ["error", 2],
+      "@stylistic/no-multi-spaces": "error",
+      "@stylistic/no-multiple-empty-lines": "error",
+      "@stylistic/no-trailing-spaces": "error",
+      "@stylistic/no-whitespace-before-property": "error",
+      "@stylistic/comma-spacing": ["error"],
+      "@stylistic/comma-dangle": ["error", "always-multiline"],
+      "@stylistic/function-call-spacing": ["error", "never"],
+      "@stylistic/member-delimiter-style": "error",
+      "@stylistic/object-property-newline": [
         "error",
         { "allowAllPropertiesOnSameLine": true },
       ],
-      "@stylistic/ts/padding-line-between-statements": [
+      "@stylistic/padding-line-between-statements": [
         "error",
         { "blankLine": "always", "prev": "*", "next": "return" },
       ],
-      "@stylistic/ts/quotes": ["error", "double"],
-      "@stylistic/ts/semi": ["error", "always"],
-      "@stylistic/ts/space-before-function-paren": [
+      "@stylistic/quotes": ["error", "double"],
+      "@stylistic/semi": ["error", "always"],
+      "@stylistic/space-before-function-paren": [
         "error",
         { "anonymous": "never", "named": "never", "asyncArrow": "always" },
       ],
-      "@stylistic/ts/type-annotation-spacing": "error",
+      "@stylistic/type-annotation-spacing": "error",
     },
   }
 ];
