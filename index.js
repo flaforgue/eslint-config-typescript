@@ -101,7 +101,18 @@ export default [
           allowNumber: true,
         }
       ],
-      "@typescript-eslint/strict-boolean-expressions": "error",
+      "@typescript-eslint/strict-boolean-expressions": ["error",
+        {
+          allowAny: false,
+          allowNullableBoolean: false,
+          allowNullableEnum: false,
+          allowNullableNumber: false,
+          allowNullableObject: false,
+          allowNullableString: false,
+          allowNumber: false,
+          allowString: false,
+        }
+      ],
 
       // Stylistic JS
       "@stylistic/arrow-parens": ["error", "always"],
