@@ -54,6 +54,12 @@ export default [
       "no-self-compare": ["error"],
       "no-sequences": ["error"],
       "no-throw-literal": ["error"],
+      "no-unused-vars": ["error", {
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+      }],
       "no-useless-call": ["error"],
       "no-useless-concat": ["error"],
       "no-void": ["error"],
