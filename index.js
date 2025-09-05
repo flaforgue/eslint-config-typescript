@@ -80,10 +80,15 @@ export default [
           format: ["camelCase"],
           leadingUnderscore: "allow"
         },
+
+        // data-* properties
         {
           selector: ["objectLiteralProperty"],
-          format: ["camelCase", "UPPER_CASE"],
-          leadingUnderscore: "allow",
+          format: null,
+          filter: {
+            "regex": "^data-",
+            "match": true,
+          },
         },
 
         // React component as exported functions
@@ -99,6 +104,11 @@ export default [
           format: ["UPPER_CASE"],
           modifiers: ["exported"],
           leadingUnderscore: "forbid"
+        },
+        {
+          selector: ["objectLiteralProperty"],
+          format: ["camelCase", "UPPER_CASE"],
+          leadingUnderscore: "allow",
         },
 
         // Class members
