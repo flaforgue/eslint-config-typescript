@@ -25,8 +25,8 @@ export default [
   {
     plugins: {
       "unused-imports": unusedImportsPlugin,
-      "@typescript-eslint": tsEslint.plugin,
-      "@stylistic": stylisticPlugin,
+      "typescript-eslint": tsEslint.plugin,
+      "stylistic": stylisticPlugin,
     },
     rules: {
       // Eslint
@@ -72,8 +72,8 @@ export default [
       "unused-imports/no-unused-imports": "error",
 
       // Typescript
-      "@typescript-eslint/explicit-member-accessibility": ["error"],
-      "@typescript-eslint/naming-convention": [
+      "typescript-eslint/explicit-member-accessibility": ["error"],
+      "typescript-eslint/naming-convention": [
         "error",
         {
           selector: ["variableLike", "memberLike"],
@@ -154,10 +154,10 @@ export default [
           leadingUnderscore: "allow"
         },
       ],
-      "@typescript-eslint/no-extraneous-class": ["error", {
+      "typescript-eslint/no-extraneous-class": ["error", {
         "allowWithDecorator": true
       }],
-      "@typescript-eslint/no-unused-vars": [
+      "typescript-eslint/no-unused-vars": [
         "error",
         {
           "args": "all",
@@ -169,13 +169,13 @@ export default [
           "ignoreRestSiblings": true
         }
       ],
-      "@typescript-eslint/restrict-template-expressions": [
+      "typescript-eslint/restrict-template-expressions": [
         "error",
         {
           allowNumber: true,
         }
       ],
-      "@typescript-eslint/strict-boolean-expressions": ["error",
+      "typescript-eslint/strict-boolean-expressions": ["error",
         {
           allowAny: false,
           allowNullableBoolean: false,
@@ -189,39 +189,39 @@ export default [
       ],
 
       // Stylistic JS
-      "@stylistic/arrow-parens": ["error", "always"],
-      "@stylistic/brace-style": [
+      "stylistic/arrow-parens": ["error", "always"],
+      "stylistic/brace-style": [
         "error",
         "1tbs",
         {
           "allowSingleLine": false
         }
       ],
-      "@stylistic/function-call-argument-newline": ["error", "consistent"],
-      "@stylistic/indent": ["error", 2],
-      "@stylistic/no-multi-spaces": "error",
-      "@stylistic/no-multiple-empty-lines": "error",
-      "@stylistic/no-trailing-spaces": "error",
-      "@stylistic/no-whitespace-before-property": "error",
-      "@stylistic/comma-spacing": ["error"],
-      "@stylistic/comma-dangle": ["error", "always-multiline"],
-      "@stylistic/function-call-spacing": ["error", "never"],
-      "@stylistic/member-delimiter-style": "error",
-      "@stylistic/object-property-newline": [
+      "stylistic/function-call-argument-newline": ["error", "consistent"],
+      "stylistic/indent": ["error", 2],
+      "stylistic/no-multi-spaces": "error",
+      "stylistic/no-multiple-empty-lines": "error",
+      "stylistic/no-trailing-spaces": "error",
+      "stylistic/no-whitespace-before-property": "error",
+      "stylistic/comma-spacing": ["error"],
+      "stylistic/comma-dangle": ["error", "always-multiline"],
+      "stylistic/function-call-spacing": ["error", "never"],
+      "stylistic/member-delimiter-style": "error",
+      "stylistic/object-property-newline": [
         "error",
         { "allowAllPropertiesOnSameLine": true },
       ],
-      "@stylistic/padding-line-between-statements": [
+      "stylistic/padding-line-between-statements": [
         "error",
         { "blankLine": "always", "prev": "*", "next": "return" },
       ],
-      "@stylistic/quotes": ["error", "double"],
-      "@stylistic/semi": ["error", "always"],
-      "@stylistic/space-before-function-paren": [
+      "stylistic/quotes": ["error", "double"],
+      "stylistic/semi": ["error", "always"],
+      "stylistic/space-before-function-paren": [
         "error",
         { "anonymous": "never", "named": "never", "asyncArrow": "always" },
       ],
-      "@stylistic/type-annotation-spacing": "error",
+      "stylistic/type-annotation-spacing": "error",
     },
   }
 ];
