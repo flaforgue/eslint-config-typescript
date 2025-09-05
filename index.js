@@ -86,10 +86,17 @@ export default [
           leadingUnderscore: "allow",
         },
 
-        // enum written as const or global const value
+        // React component as exported functions
+        {
+          selector: ["function"],
+          modifiers: ["exported"],
+          format: ["camelCase", "PascalCase"],
+        },
+
+        // Exported const and enum objects
         {
           selector: ["variable"],
-          format: ["PascalCase"],
+          format: ["UPPER_CASE"],
           modifiers: ["exported"],
           leadingUnderscore: "forbid"
         },
