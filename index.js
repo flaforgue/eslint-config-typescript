@@ -17,6 +17,11 @@ export default [
   tsEslint.configs.eslintRecommended,
   ...tsEslint.configs.strictTypeChecked,
   ...tsEslint.configs.stylisticTypeChecked,
+  stylisticPlugin.configs.customize({
+    quotes: 'double',
+    semi: true,
+    arrowParens: true,
+  }),
   {
     plugins: {
       "unused-imports": unusedImportsPlugin,
@@ -27,6 +32,7 @@ export default [
       // Eslint
       "array-callback-return": "error",
       "block-scoped-var": "error",
+      "curly": "error",
       "default-case": ["error"],
       "default-param-last": ["error"],
       "max-classes-per-file": ["off"],
@@ -184,6 +190,13 @@ export default [
 
       // Stylistic JS
       "@stylistic/arrow-parens": ["error", "always"],
+      "@stylistic/brace-style": [
+        "error",
+        "1tbs",
+        {
+          "allowSingleLine": false
+        }
+      ],
       "@stylistic/function-call-argument-newline": ["error", "consistent"],
       "@stylistic/indent": ["error", 2],
       "@stylistic/no-multi-spaces": "error",
