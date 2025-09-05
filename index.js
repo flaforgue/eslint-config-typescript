@@ -54,12 +54,7 @@ export default [
       "no-self-compare": ["error"],
       "no-sequences": ["error"],
       "no-throw-literal": ["error"],
-      "no-unused-vars": ["error", {
-        "varsIgnorePattern": "^_",
-        "argsIgnorePattern": "^_",
-        "caughtErrorsIgnorePattern": "^_",
-        "destructuredArrayIgnorePattern": "^_",
-      }],
+      "no-unused-vars": ["off"],
       "no-useless-call": ["error"],
       "no-useless-concat": ["error"],
       "no-void": ["error"],
@@ -101,6 +96,18 @@ export default [
       "@typescript-eslint/no-extraneous-class": ["error", {
         "allowWithDecorator": true
       }],
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "args": "all",
+          "argsIgnorePattern": "^_",
+          "caughtErrors": "all",
+          "caughtErrorsIgnorePattern": "^_",
+          "destructuredArrayIgnorePattern": "^_",
+          "varsIgnorePattern": "^_",
+          "ignoreRestSiblings": true
+        }
+      ],
       "@typescript-eslint/restrict-template-expressions": [
         "error",
         {
