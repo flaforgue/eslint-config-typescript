@@ -70,13 +70,67 @@ export default [
       "@typescript-eslint/naming-convention": [
         "error",
         {
+          selector: ["variableLike", "memberLike"],
+          format: ["camelCase"],
+          leadingUnderscore: "allow"
+        },
+        {
+          selector: ["objectLiteralProperty"],
+          format: ["camelCase", "UPPER_CASE"],
+          leadingUnderscore: "allow",
+        },
+
+        // enum written as const or global const value
+        {
+          selector: ["variable"],
+          format: ["PascalCase"],
+          modifiers: ["exported"],
+          leadingUnderscore: "forbid"
+        },
+
+        // Class members
+        {
+          selector: "memberLike",
+          modifiers: ["private"],
+          format: ["camelCase"],
+          leadingUnderscore: "require",
+        },
+        {
+          selector: "memberLike",
+          modifiers: ["private", "readonly"],
+          format: ["camelCase"],
+          leadingUnderscore: "forbid",
+        },
+        {
+          selector: "memberLike",
+          modifiers: ["protected"],
+          format: ["camelCase"],
+          leadingUnderscore: "require",
+        },
+        {
+          selector: "memberLike",
+          modifiers: ["protected", "readonly"],
+          format: ["camelCase"],
+          leadingUnderscore: "forbid",
+        },
+        {
+          selector: "memberLike",
+          modifiers: ["public"],
+          format: ["camelCase"],
+          leadingUnderscore: "forbid",
+        },
+
+        // Types
+        {
           selector: "typeLike",
           format: ["PascalCase"],
           leadingUnderscore: "forbid",
           trailingUnderscore: "forbid",
         },
+
+        // Boolean
         {
-          selector: "variable",
+          selector: ["classicAccessor", "autoAccessor", "classProperty", "parameter", "parameterProperty", "typeProperty", "variable"],
           types: ["boolean"],
           format: ["PascalCase"],
           prefix: [
@@ -91,6 +145,7 @@ export default [
             "was",
             "will",
           ],
+          leadingUnderscore: "allow"
         },
       ],
       "@typescript-eslint/no-extraneous-class": ["error", {
