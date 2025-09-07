@@ -91,7 +91,7 @@ export default [
           },
         },
 
-        // React component as exported functions
+        // Decorators exported as functions
         {
           selector: ["function"],
           modifiers: ["exported"],
