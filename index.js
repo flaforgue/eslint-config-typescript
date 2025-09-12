@@ -139,6 +139,7 @@ export default [
         {
           selector: "memberLike",
           modifiers: ["public"],
+          format: ["camelCase", "PascalCase", "snake_case", "UPPER_CASE"],
           leadingUnderscore: "forbid",
         },
 
