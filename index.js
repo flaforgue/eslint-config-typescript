@@ -76,7 +76,7 @@ export default [
       "@typescript-eslint/naming-convention": [
         "error",
         {
-          selector: ["variableLike", "memberLike"],
+          selector: ["variableLike"],
           format: ["camelCase"],
           leadingUnderscore: "allow"
         },
