@@ -72,6 +72,7 @@ export default [
       "unused-imports/no-unused-imports": "error",
 
       // Typescript
+      "@typescript-eslint/consistent-type-imports": ["error"],
       "@typescript-eslint/explicit-member-accessibility": ["error"],
       "@typescript-eslint/naming-convention": [
         "error",
@@ -204,6 +205,7 @@ export default [
           allowString: false,
         }
       ],
+      "@typescript-eslint/no-import-type-side-effects": ["error"],
 
       // Stylistic JS
       "@stylistic/arrow-parens": ["error", "always"],
