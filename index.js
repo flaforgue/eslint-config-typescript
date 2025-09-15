@@ -65,6 +65,7 @@ export default [
       "no-useless-concat": ["error"],
       "no-void": ["error"],
       "prefer-regex-literals": ["error"],
+      "preserve-caught-error": ["error"],
       "radix": ["error"],
       "require-await": ["error"],
 
