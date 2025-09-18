@@ -1,6 +1,6 @@
 {
   "name": "@flaforgue/eslint-config-typescript",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Eslint shared configuration for typescript projects",
   "main": "index.js",
   "type": "module",
